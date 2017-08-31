@@ -1,90 +1,20 @@
 <!DOCTYPE html>
-<html lan="en">
-  <head>
-    <link rel="stylesheet" type="text/css" href="https://getbootstrap.com/dist/css/bootstrap.min.css">
-      <style>
-        body { margin: 25px; padding: 25px; }
-        h1 { font-size: 30px; }
-        h1, h2, h3, h4, h5 { text-align: center;}
-        div { margin:20px; padding: 20px;  }
-        table { font-size: 12px; }
-        p { font-size: 12px; }
-      </style>
-      <script type="text/javascript">
-        function BuildTable() {
-          tableArray = [
-            ["From\\To", "int", "double", "string", "char"],
-            ["int", "-", "(double)myInt", "myInt.ToString()", "-"],
-            ["double", "(int)myDouble", "-", "myDouble.ToString()", "-"],
-            ["string", "Int32.TryParse(myString, out int myInt)",
-            "Double.TryParse(myString, out int mydouble)", "-", "myString[x]"],
-            ["char", "Convert.ToInt32(myChar)","Char.GetNumericValue(myChar)",
-            "myChar.ToString()", "-" ]
-          ];
-          var table = document.getElementById("convertTable");
-          for (var y=0; y<tableArray.length; y++) {
-            var tr = document.createElement("tr");
-            for (var x=0; x<tableArray[0].length; x++) {
-              var td = document.createElement("td");
-              var text = document.createTextNode(tableArray[y][x]);
-              td.appendChild(text);
-              tr.appendChild(td);
-            }
-            table.appendChild(tr);
-          }
-        }
-      </script>
-  </head>
-  <body onload="BuildTable()">
-    <h1>C# Coding Reference</h1>
-    <div style="width:60%">
-      <h5>Type Conversion Chart</h5>
-      <table id="convertTable" class="table table-striped table-bordered
-      table-condensed table-responsive">
-      </table>
-    </div>
-    <div style="display:flex">
-      <div style="width:50%;">
-        <h5>Declaration Syntax</h5>
-        <p>
-          <b>Functions:</b><br>
-          public static bool myFunction(int a, int b) {<br>
-            return (a == b);<br>
-          }
-        </p>
-        <p>
-          <b>Lists:</b><br>
-          List<int> myList = new List<int>();<br>
-          myList.Add(1);
-        </p>
-        <p>
-          <b>Arrays:</b><br>
-          string[] myArr = new string[] {"cat, "dog", "pig"}<br>
-          myArr[2] = "hamster";
-        </p>
-      </div>
-      <div style="flex-grow:1;">
-        <h5>Loop Syntax</h5>
-        <p>
-          <b>For</b><br>
-          for (int x=0; x < myArr.Length; x++) {<br>
-            Console.WriteLine(myArr[x]);<br>
-          }
-        </p>
-        <p>
-          <b>For Each</b><br>
-          foreach (int a in myArr) {<br>
-            total += a;<br>
-          }
-        </p>
-        <p>
-          <b>While</b><br>
-          while (x < 10) {<br>
-            Console.WriteLine("still");<br>
-            x++<br>
-          }
-        </p>
-      </div>
-    </div>
-  </body>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="https://getbootstrap.com/dist/css/bootstrap.min.css">
+            <style>
+              body { margin: 25px; padding: 25px; }
+              h1 { font-size: 30px; }
+              h1, h2, h3, h4, h5 { text-align: center;}
+              div { margin:20px; padding: 20px;  }
+              table { font-size: 12px; }
+              p { font-size: 12px; }
+            </style>
+    </head>
+    <body>
+        <h1>Learn to Code</h1>
+        <p>Here is my website that I am using to learn to program. Below I have links that I have found helpful.</p>
+        <h3>Coding Reference Sheets</h3>
+        <a href="cSharp.html">C#</a>
+    </body>
 </html>
