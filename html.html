@@ -11,31 +11,9 @@
       p { font-size: 12px; }
     </style>
     <script type="text/javascript">
-      function BuildTable() {
-        tableArray = [
-          ["From\\To", "int", "double", "string", "char"],
-          ["int", "-", "(double)myInt", "myInt.ToString()", "-"],
-          ["double", "(int)myDouble", "-", "myDouble.ToString()", "-"],
-          ["string", "Int32.TryParse(myString, out int myInt)",
-          "Double.TryParse(myString, out int mydouble)", "-", "myString[x]"],
-          ["char", "Convert.ToInt32(myChar)","Char.GetNumericValue(myChar)",
-          "myChar.ToString()", "-" ]
-        ];
-        var table = document.getElementById("convertTable");
-        for (var y=0; y<tableArray.length; y++) {
-          var tr = document.createElement("tr");
-          for (var x=0; x<tableArray[0].length; x++) {
-            var td = document.createElement("td");
-            var text = document.createTextNode(tableArray[y][x]);
-            td.appendChild(text);
-            tr.appendChild(td);
-          }
-          table.appendChild(tr);
-        }
-      }
     </script>
   </head>
-  <body onload="BuildTable()">
+  <body>
     <h1>HTML Coding Reference</h1>
     <div style="display:flex;">
       <div style="width:50%;border-style:solid;">
