@@ -2,21 +2,13 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="https://getbootstrap.com/dist/css/bootstrap.min.css">
-            <style>
-              body { margin: 25px; padding: 25px; }
-              h1 { font-size: 30px; }
-              h1, h2, h3, h4, h5 { text-align: center;}
-              div { margin:20px; padding: 20px;  }
-              table { font-size: 12px; }
-              p { font-size: 12px; }
-              ul { list-style-type: none; }
-            </style>
+        <link rel="stylesheet" type="text/css" href="myStyle.css">
     </head>
     <body>
         <h1>Learn to Code</h1>
         <p>Here is my website that I am using to learn to program. Below I have links that I have found helpful.</p>
-        <div style="display:flex">
-            <div style="width:35%;border-style:solid;">
+        <div class="wrapper">
+            <div style="width:35%;" class="outline pad">
                 <h5>Coding Reference Sheets</h5>
                 <ul>
                     <li><a href="cSharp.html">C#</a></li>
@@ -24,7 +16,7 @@
                     <li>link</li>
                 </ul>
             </div>
-            <div style="flex-grow:1;border-style:solid;">
+            <div style="flex-grow:1;" class="outline pad">
                 <h5>Code Practice Sites</h5>
                 <ul>
                     <li><a href="http://www.codewars.com">Code Wars</a> - Many languages good feedback on best solutions</li>
@@ -32,6 +24,28 @@
                     <li><a href="http://www.codecombat.com">Code Combat</a> - RPG-like game with Python, JavaScript, CoffeeScript, Lua</li>
                 </ul>
             </div>
-        <div>
+        </div>
+        <div class="wrapper">
+            <div class="outline pad">
+                <h5>Quick Running Code</h5>
+                <p>Useful Apps for Running Code</p>
+                <ul>
+                    <li>LinqPad - Desktop App for testing C#</li>
+                    <li><a href="http://rextester.com/runcode">RexTester</a> - Online App for Assembly, C, C++, C#, F#, Go, Haskall, Java, Javascript, MySQL, Pascal, Perl, PHP, Python, R, Ruby, Swift.</li>
+                </ul>
+            </div>
+            <div class="outline pad">
+                <h5>Useful Applications</h5>
+                <ul>
+                    <li>SLAM (Simultaneous Localaization and Mapping)
+                        <ul>
+                            <li>Robots mapping the area around them</li>
+                            <li><a href="http://wiki.ros.org/vslam">Ros</a></li>
+                            <li><a href="http://www.cvlibs.net/datasets/kitti/">Competitions</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </body>
 </html>
