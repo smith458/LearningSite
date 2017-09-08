@@ -32,6 +32,7 @@
             var td = document.createElement("td");
             var text = document.createTextNode(tableArray[y][x]);
             td.appendChild(text);
+            if (x==0 || y ==0) { td.setAttribute("style", "font-weight:bold;"); }
             tr.appendChild(td);
           }
           table.appendChild(tr);
