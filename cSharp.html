@@ -150,6 +150,15 @@
           <li><a href="https://github.com/sestoft/C5">C5</a> - Generic Collections Library</li>
         </ul>
       </div>
+      <div style="width:30%" class="pad outline">
+        <h5>Null Operators:</h5>
+        <ul>
+          <li>value = Object?.Property (Null Conditional) - If Object is null, assigns null to value. Otherwise assigns Property to value. Prevents Null Reference exception if Object is null.</li>
+          <li>value = Array?[1] (Second Null Conditional) - Returns value at index 1 of the array if it exists, otherwise returns null. Prevents exception if index doesn't exist</li>
+          <li>value == Object ?? (Null Coalescing Operator) - Returns Object unless it is null, then it returns 0. Allows setting a default if Object is null.</li>
+          <li>myDelegate?.Invoke(args) (Null-conditional Delegate Invocation) - Invokes the delegate if not null.</li>
+        </ul>
+      </div>
     </div>
     string padleft
   </body>
