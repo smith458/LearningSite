@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="myStyle.css">
+    </head>
+    <body>
+      <div class="wrapper">
+        <div style="width: 90%" class="outline pad">
+          <h5>Convolutional Neural Networks (From Bob Zigon)</h5>
+          <p>
+            Here is my "algorithm" for learning CNN's. As I said, it is based on 2 years of intensive study
+and application. My assumption is that the student is motivated to learn this stuff, but doesn't have
+daily access to a "teacher/professor" that they can run to. Feel free to ask me questions about the list.
+I think the real value of this list is the "order of execution". If you start too far down the list you won't have
+the basics under your belt. I didn't have anyone suggesting an order so I fumbled, but I am very tenacious.
+          </p>
+          <ol>
+            <li>Read the Bishop Red <a href="http://www.amazon.com/Networks-Pattern-Recognition-Advanced-Econometrics/dp/0198538642/ref=sr_1_1?s=books&ie=UTF8&qid=1460603822&sr=1-1&keywords=bishop+neural+networks">Book.</a></li>
+            <li>Optionally read a couple chapters of this other Bishop<a href="http://www.amazon.com/Pattern-Recognition-Learning-Information-Statistics/dp/0387310738">Book.</a></li>
+            <li>Take the Stanford CS 231n <a href="http://cs231n.stanford.edu/">class</a> (AMAZINGLY practical). I can't emphasize the importance of this class. It is amazing. I think you can take it in parallel with reading #1</li>
+            <li>This <a href="http://andrew.gibiansky.com/blog/machine-learning/convolutional-neural-networks/">web site</a> is good .. but there are more.</li>
+            <li>Review the 1 page <a href="http://www.cs.bham.ac.uk/~jxb/NN/nn.html">CNN program</a> in C . When I put this on the debugger it really helped to reinforce the mathematics and the simple data structures.</li>
+            <li>Google on this phrase "neural network code in c".</li>
+            <li>Review <a href="http://neural2d.net/">Neural 2D</a> <a href="https://github.com/davidrmiller/neural2d">Github</a>) - A CNN framework in 1 .H and 1 .CPP file. It's less of a toy and closer to Caffe, but the code size is manageable so you can put it on a debugger and see how a more complex framework functions.</li>
+            <li>Consider using Caffe. Integrate this with <a href="https://developer.nvidia.com/digits">NVidia DIGITS</a>. DIGITS supplies data management to the training and testing problem. V3 also adds DeepOMatic, a viz tool.</li>
+            <li>At some point you will look at other CNN frameworks. If you go through the steps I have outlined, you will have a basic "intuition" for how to build one. However, you will eventually realize that you need a tool to help you "debug" them. You will want to look for a tool that allows you to "visualize" the internal features and filters of the network. This <a href="https://www.cs.nyu.edu/~fergus/papers/zeilerECCV2014.pdf">paper</a> will help. Here is another <a href="http://yosinski.com/deepvis">Visualizer</a></li>
+            <li>When I first started using Caffe, I started with the <a href="http://www.cs.columbia.edu/CAVE/software/softlib/coil-20.php">COIL20</a> dataset. This helped me understand a small dataset in black and white. Then I moved to <a href="http://www.cs.columbia.edu/CAVE/software/softlib/coil-100.php">COIL100</a>.
+              This is a larger dataset in color. When I worked with this dataset I eventually discovered that CNN's can be "color blind".  The green donut
+              looked like the red donut. I eventually discovered (based on reading numerous papers) that operating on color images in RGB space is a
+              bad idea. You need to switch to HSV.
+            </li>
+            <li>Here is a ZIP file. It has 150 or so CNN papers by the important authors. The Hinton, Ng and LeCun papers are good from a historical perspective. Krizhevsky, Karpathy, Zeiler and Ciresan are their students who graduated and are pushing the technology.</li>
+            <li>I strongly advise you move on to <a href="https://docs.microsoft.com/en-us/cognitive-toolkit/">CNTK</a> with <a href="https://docs.microsoft.com/en-us/cognitive-toolkit/using-cntk-with-keras">Keras</a>.</li>
+          </ol> 
+        </div>
+      </div>
+    </body>
+</html>
